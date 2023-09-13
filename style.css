@@ -65,3 +65,44 @@ aside > :last-child,
 	- 640px
 	- 1000px
 */
+.reklamy {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.reklama1,
+.reklama2 {
+  flex-basis: 100%;
+}
+
+@media (min-width: 640px) {
+  .obsah {
+    display: flex;
+    flex-wrap: wrap;  
+  }
+  .clanek {
+    flex: 1 1 60%;
+  }
+  .reklamy {
+    flex: 0 0 40%;
+  }
+}
+@media (min-width: 1000px) {
+  .kontejner {
+    display: flex;
+    flex-wrap: wrap;  
+  }
+  .menu {
+    flex: 0 0 25%;
+  }
+  .obsah {
+    flex: 1 1 75%;
+  }
+  .reklamy {
+    flex: 0 0 100%;
+  }
+  .reklama1,
+  .reklama2 {
+    flex-basis: calc(50% - 10px);
+  }
+}
